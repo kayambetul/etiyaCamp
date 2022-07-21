@@ -11,7 +11,7 @@ public class CourseManager {
 	    }
 	    public void add(Course course) {
 	        courses.add(course);
-	        System.out.println("Eklendi");
+	        System.out.println("Eklendi : "+ course.getName());
 	    }
 	    public List<Course> getAll(){
 
