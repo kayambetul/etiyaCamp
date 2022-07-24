@@ -37,6 +37,7 @@ public class UserManager implements UserService {
 		checkIfAccountVerificate(user);
 		
 		
+		
 
 		userDao.add(user);
 
@@ -48,11 +49,23 @@ public class UserManager implements UserService {
 		return this.userDao.getAll();
 	}
 
+	@Override
+	public User getById(int id) {
+		
+		return userDao.getById(id);
+	}
 	
 	public void signIn(User user) {
 		checkIfGoogleAccountSignIn(user);
 	}
 	
+	public void login(User user) throws Exception {
+		//checkIfUserPasswordIsEmpty(user);
+		//checkIfUserEmailIsEmpty(user);
+		checkIfEmailPassword(user);
+		System.out.println(user.getEmail() +" Email / password Giris yapildi");
+		
+	}
 	
 	private void checkIfUserPasswordIsShort(User user) throws Exception {
 		if (user.getPassword().length() < 6) {
@@ -153,6 +166,17 @@ public class UserManager implements UserService {
 		}
 	}
 	
+	private void checkIfEmailPassword(User user) throws Exception  {
+
+		User userFromRepository = getById(user.getId());
+        if(!(userFromRepository.getEmail() == user.getEmail() && userFromRepository.getPassword() == user.getPassword())) {
+            throw new Exception("hata");
+        }
 	
-	
+	}
+
+
 }
+
+	
+
