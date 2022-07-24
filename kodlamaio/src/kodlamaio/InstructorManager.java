@@ -14,6 +14,16 @@ public class InstructorManager {
        instructors.add(instructor);
        System.out.println("Eklendi");
    }
+   
+   public void delete(Instructor instructor) {
+       instructors.add(instructor);
+       System.out.println("Silindi");
+   }
+   
+   public void update(Instructor instructor) {
+       instructors.add(instructor);
+       System.out.println("Güncellendi");
+   }
    public List<Instructor> getAll(){
 
        return instructors ;

@@ -24,7 +24,9 @@ public class Main {
 		
 		System.out.println(course1.getName()+"  "+course1.getCategory().getName()+"  "+course1.getInstructor().getFirstName());
 		
-		/*Product product1=new Product();
+		
+		
+		Product product1=new Product();
 		product1.setId(1);
 		product1.setName("Elma");
 		product1.setUnitPrice(50);
@@ -34,25 +36,17 @@ public class Main {
 		product2.setId(2);
 		product2.setName("Kuru fasulye");
 		product2.setUnitPrice(60);
-		product2.setCategory(category2);
+		//product2.setCategory(category2);
 		
 		System.out.println(product1.getName());
 		System.out.println(product1.getUnitPrice());
 		System.out.println(product1.getDiscountedPrice());
 		
-		System.out.println(product1.getCategory().getName());*/
+		System.out.println(product1.getCategory().getName());
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		ProductService productService=new ProductService();
+		productService.add(product1);
 		
 		
 		

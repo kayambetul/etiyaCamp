@@ -13,6 +13,14 @@ public class CourseManager {
 	        courses.add(course);
 	        System.out.println("Eklendi : "+ course.getName());
 	    }
+	    public void delete(Course course) {
+	        courses.add(course);
+	        System.out.println("Silindi : "+ course.getName());
+	    }
+	    public void update(Course course) {
+	        courses.add(course);
+	        System.out.println("Güncellendi : "+ course.getName());
+	    }
 	    public List<Course> getAll(){
 
 	        return courses ;
